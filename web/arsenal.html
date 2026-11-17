@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>冠军武库 · 主战枪皮与刀皮排行榜 | EDG 2024世界冠军</title>
+<style>
+:root{--bg:#08080F;--panel:#13121F;--panel2:#1A1929;--gold:#E3C06A;--gold2:#F5DE9A;
+--pu:#8B5CF6;--pu2:#BCA5FF;--red:#D22B2B;--text:#E8E6F0;--muted:#9C97B3;--line:#2E2B45}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);
+font-family:"Noto Sans SC","Microsoft YaHei",sans-serif;line-height:1.75;font-size:16px}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","STZhongsong","SimSun",serif}
+a{color:var(--gold);text-decoration:none}
+a:hover{color:var(--gold2)}
+nav{position:sticky;top:0;z-index:10;background:rgba(8,8,15,.94);backdrop-filter:blur(6px);
+border-bottom:1px solid var(--line)}
+nav .inner{max-width:960px;margin:0 auto;display:flex;align-items:center;gap:2px;padding:0 16px;height:58px}
+.logo{display:flex;align-items:center;gap:10px;margin-right:auto}
+.logo .mark{background:var(--red);color:#fff;font-weight:900;font-size:18px;
+padding:4px 10px;letter-spacing:2px;font-family:Arial,Helvetica,sans-serif}
+.logo .cn{color:var(--gold);font-size:13px;letter-spacing:4px}
+nav a.pl{color:var(--text);padding:6px 10px;border-radius:4px;font-size:15px}
+nav a.pl:hover{color:var(--gold2);background:rgba(139,92,246,.12)}
+nav a.pl.on{color:var(--gold2);border-bottom:2px solid var(--gold)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+background:radial-gradient(ellipse at 70% 20%,#241A42 0%,#08080F 65%)}
+.hero .wrap{padding:64px 20px 56px;position:relative}
+.hero svg.deco{position:absolute;right:-60px;top:-30px;opacity:.6;pointer-events:none}
+.vside{position:absolute;right:6px;top:120px;writing-mode:vertical-rl;letter-spacing:14px;
+color:var(--gold);font-size:20px;opacity:.85;font-weight:700}
+.kicker{color:var(--pu2);letter-spacing:6px;font-size:14px;font-weight:700;margin-bottom:20px;
+line-height:1.9}
+h1.big{font-size:clamp(44px,8vw,84px);line-height:1.08;font-weight:900;color:#fff;
+text-shadow:0 4px 34px rgba(139,92,246,.5)}
+h1.big .g{color:var(--gold)}
+.sub{margin-top:14px;color:var(--muted);font-size:17px}
+.statrow{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.stat{background:rgba(19,18,31,.85);border:1px solid var(--line);border-radius:6px;
+padding:12px 20px;min-width:130px}
+.stat b{display:block;color:var(--gold2);font-size:26px;font-family:Arial,sans-serif}
+.stat span{color:var(--muted);font-size:13px}
+section{padding:52px 0}
+section h2{font-size:26px;color:var(--gold);letter-spacing:3px;margin-bottom:8px}
+section h2 small{color:var(--muted);font-size:13px;letter-spacing:2px;margin-left:12px}
+.rule{height:2px;background:linear-gradient(90deg,var(--pu),var(--gold),transparent);
+margin-bottom:26px;width:220px}
+p.lead{color:var(--text);font-size:16.5px}
+.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px;
+transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--gold)}
+.card h3{color:#fff;font-size:19px;margin-bottom:4px}
+.card .role{color:var(--pu2);font-size:13px;letter-spacing:2px;margin-bottom:10px;font-weight:700}
+.card ul{list-style:none}
+.card li{color:var(--muted);font-size:14px;padding-left:16px;position:relative}
+.card li::before{content:"";position:absolute;left:2px;top:11px;width:5px;height:5px;
+background:var(--gold);transform:rotate(45deg)}
+a.cardlink{display:block}
+a.cardlink:hover{color:inherit}
+.tl{border-left:2px solid var(--line);margin-left:10px;padding-left:26px}
+.tl .ev{position:relative;padding-bottom:26px}
+.tl .ev::before{content:"";position:absolute;left:-33px;top:7px;width:10px;height:10px;
+border-radius:50%;background:var(--bg);border:2px solid var(--gold)}
+.tl .ev .tag{color:var(--pu2);font-size:13px;font-weight:700;letter-spacing:1px}
+.tl .ev b{color:#fff;font-size:17px;display:block;margin:2px 0}
+.tl .ev p{color:var(--muted);font-size:14.5px}
+.fanline{text-align:center;padding:34px 0 6px;opacity:.9}
+.phero{display:flex;gap:34px;align-items:center;flex-wrap:wrap;padding:60px 0 40px}
+.shield{flex:0 0 auto}
+.ptag{display:inline-block;margin:3px 6px 3px 0;padding:4px 12px;border:1px solid var(--pu);
+color:var(--pu2);border-radius:999px;font-size:13px;letter-spacing:1px}
+.agents .ag{display:inline-block;margin:4px 8px 4px 0;padding:6px 14px;border-radius:4px;
+background:var(--panel2);border:1px solid var(--line);color:var(--gold2);font-size:14.5px}
+.agents .ag small{color:var(--muted);margin-left:6px}
+blockquote{border-left:3px solid var(--gold);background:var(--panel);
+padding:18px 24px;margin:24px 0;color:var(--gold2);font-size:18px;border-radius:0 8px 8px 0}
+blockquote footer{color:var(--muted);font-size:13px;margin-top:6px}
+/* ---------- 排行榜 ---------- */
+.rk{display:flex;gap:16px;align-items:flex-start;background:var(--panel);
+border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin-bottom:12px;
+transition:border-color .15s}
+.rk:hover{border-color:var(--gold)}
+.rk .no{flex:0 0 46px;height:46px;border-radius:8px;display:flex;align-items:center;
+justify-content:center;font-weight:900;font-size:22px;font-family:Arial}
+.no1{background:linear-gradient(135deg,#F5DE9A,#B58B2E);color:#141007}
+.no2{background:linear-gradient(135deg,#D9DCE8,#8F93A6);color:#111318}
+.no3{background:linear-gradient(135deg,#D9A06A,#8F5B2E);color:#140B05}
+.nox{background:var(--panel2);color:var(--muted);border:1px solid var(--line)}
+.rk .body{flex:1;min-width:0}
+.rk h3{color:#fff;font-size:18px;display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.rk h3 .wtype{display:inline-block;padding:2px 10px;border-radius:4px;background:rgba(139,92,246,.15);
+border:1px solid var(--line);color:var(--pu2);font-size:12.5px;letter-spacing:1px;vertical-align:2px}
+.rk .who{color:var(--gold2);font-size:14px;margin-top:2px}
+.rk .who b{color:var(--gold)}
+.rk p{color:var(--muted);font-size:14.5px;margin-top:4px}
+.mention{display:inline-block;margin:6px 10px 6px 0;padding:6px 14px;border-radius:999px;
+background:var(--panel2);border:1px dashed var(--line);color:var(--muted);font-size:14px}
+.mention b{color:var(--pu2)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--pu);
+padding:16px 20px;border-radius:0 8px 8px 0;color:var(--muted);font-size:14px;margin-top:28px}
+footer.site{border-top:1px solid var(--line);margin-top:60px;padding:28px 0 44px;
+color:var(--muted);font-size:13px;text-align:center;letter-spacing:1px}
+footer.site b{color:var(--gold)}
+@media(max-width:640px){.vside{display:none}.phero{gap:20px}.rk{padding:12px 14px}}
+/* ---- 图片相关 ---- */
+.heroimg{display:block;width:100%;height:auto;border-top:1px solid var(--line)}
+.phero>div:last-child{flex:1 1 380px;min-width:0}
+.pcard{display:block;width:300px;max-width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;
+border-radius:10px;border:1px solid var(--line);box-shadow:0 18px 46px rgba(0,0,0,.55)}
+.gal{display:grid;grid-template-columns:1fr;gap:22px}
+.gal figure{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.gal img{display:block;width:100%;height:auto}
+.gal2 img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 25%}
+.gal figcaption{padding:12px 18px;color:var(--muted);font-size:14px;
+border-top:1px solid var(--line);background:var(--panel2)}
+.gal2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:720px){.gal2{grid-template-columns:1fr}.pcard{width:100%}}
+</style></head>
+<body>
+<nav><div class="inner">
+  <a class="logo" href="../index.html">
+    <span class="mark">EDG</span><span class="cn serif">骑士加冕</span>
+  </a><a class="pl" href="kk.html">康康</a><a class="pl" href="chichoo.html">球球</a><a class="pl" href="nobody.html">nobody</a><a class="pl" href="smoggy.html">Smoggy</a><a class="pl" href="simon.html">S1Mon</a><a class="pl" href="arsenal.html">武库</a><a class="pl" href="gallery.html">图集</a>
+</div></nav>
+<div class="wrap">
+
+<div class="phero">
+  <div class="shield"><svg width="150" height="150" viewBox="0 0 150 150">
+    <path d="M75 8 L138 34 V82 C138 112 110 132 75 142 C40 132 12 112 12 82 V34 Z"
+    fill="#13121F" stroke="#E3C06A" stroke-width="2.5"/>
+    <path d="M75 52 L84 70 L104 75 L84 80 L75 98 L66 80 L46 75 L66 70 Z" fill="#E3C06A"/>
+    <path d="M40 112 h70" stroke="#8B5CF6" stroke-width="2"/>
+  </svg></div>
+  <div>
+    <div class="kicker">EDG · 2024 CHAMPIONS SEOUL · 决赛武器统计</div>
+    <h1 class="big serif" style="font-size:clamp(36px,6vw,64px)">冠军<span class="g">武库</span></h1>
+    <p class="sub">他们在仁川举起奖杯时，手里握着的是这些皮肤。<br>
+    排名综合决赛出场人次与名场面含金量。</p>
+  </div>
+</div>
+<div class="fanline"><svg width="150" height="46" viewBox="0 0 150 46"><g stroke-linecap="round"><path d="M75 44 L59 5" stroke="#E3C06A" stroke-width="2" opacity="0.9"/><path d="M75 44 L45 9" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L32 15" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L23 23" stroke="#8B5CF6" stroke-width="2" opacity="0.9"/><path d="M75 44 L17 33" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L15 44" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L17 54" stroke="#E3C06A" stroke-width="2" opacity="0.9"/><path d="M75 44 L23 63" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L32 72" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L45 78" stroke="#8B5CF6" stroke-width="2" opacity="0.9"/><path d="M75 44 L59 82" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><circle cx="75" cy="44" r="5" fill="#E3C06A"/><circle cx="75" cy="44" r="10" fill="none" stroke="#8B5CF6" stroke-width="1.2" opacity=".7"/></g></svg></div>
+<section>
+  <h2 class="serif">主战枪皮排行榜<small>TOP 10 WEAPON SKINS</small></h2>
+  <div class="rule"></div>
+  <div class="rk"><div class="no no1">1</div>
+  <div class="body">
+    <h3><span class="wtype">幻影</span>幻影 · 侦查力量</h3>
+    <div class="who">使用者：<b>康康 / nobody / Smoggy</b></div>
+    <p>三人共用的「队枪」，决赛出场人次第一。从小组赛到决胜图幽邃地窟，侦查力量幻影贯穿了EDG整个淘汰赛征程。</p>
+  </div></div><div class="rk"><div class="no no2">2</div>
+  <div class="body">
+    <h3><span class="wtype">狂徒</span>狂徒 · 2023全球冠军赛</h3>
+    <div class="who">使用者：<b>康康</b></div>
+    <p>康康的主战步枪——决赛 111 杀、26 首杀的击杀纪录大多由它完成。用上一届的冠军枪，赢下这一届的冠军。</p>
+  </div></div><div class="rk"><div class="no no3">3</div>
+  <div class="body">
+    <h3><span class="wtype">戍卫</span>戍卫 · 掠夺印象</h3>
+    <div class="who">使用者：<b>康康</b></div>
+    <p>冠军点之枪：决胜图被追分至 8-11 时，康康掏出掠夺印象戍卫前压，一敌众四杀定鼎。网友：「这下真是给掠夺戍卫带货了」。</p>
+  </div></div><div class="rk"><div class="no nox">4</div>
+  <div class="body">
+    <h3><span class="wtype">冥驹</span>冥驹 · 堕天遗武</h3>
+    <div class="who">使用者：<b>康康</b></div>
+    <p>康康的狙击体系。生涯早期他以昂贵狙击的赌博式打法闻名，决赛里这杆冥驹已收放自如。后被康康选入 EDG 甄选返场套装。</p>
+  </div></div><div class="rk"><div class="no nox">5</div>
+  <div class="body">
+    <h3><span class="wtype">幻影</span>幻影 · 2024全球冠军赛</h3>
+    <div class="who">使用者：<b>nobody</b></div>
+    <p>本届冠军幻影，枪尾金色 VCT 标、星云呼吸特效。由指挥 nobody 拿着它赢下自己指挥的世界冠军，意义拉满。</p>
+  </div></div><div class="rk"><div class="no nox">6</div>
+  <div class="body">
+    <h3><span class="wtype">狂徒</span>狂徒 · 爱沃莉的梦之翼</h3>
+    <div class="who">使用者：<b>S1Mon</b></div>
+    <p>决胜图第9回合：S1Mon 一把「梦之翼」狂徒正面手撕 MiniBoo 的冥驹，随后康康收下 Wo0t——新人用梦境撕碎了狙击线。</p>
+  </div></div><div class="rk"><div class="no nox">7</div>
+  <div class="body">
+    <h3><span class="wtype">戍卫</span>戍卫 · 天界神兵</h3>
+    <div class="who">使用者：<b>球球</b></div>
+    <p>球球的决赛主武器。稳、冷、准的枪线配上天界神兵的素雅外形，正如他在树屋 1v4 时的样子。</p>
+  </div></div><div class="rk"><div class="no nox">8</div>
+  <div class="body">
+    <h3><span class="wtype">狂徒</span>狂徒 · 混沌序幕</h3>
+    <div class="who">使用者：<b>nobody</b></div>
+    <p>nobody 的另一把主战。指挥官从不迷信某一把枪——但有它在手的回合，EDG 的进攻总是秩序井然。</p>
+  </div></div><div class="rk"><div class="no nox">9</div>
+  <div class="body">
+    <h3><span class="wtype">狂徒</span>狂徒 · 2021全球冠军赛</h3>
+    <div class="who">使用者：<b>球球</b></div>
+    <p>最老的一届冠军枪。三届冠军皮肤的传承在这支队伍里：21（球球）、23（康康）、24（nobody）——最后他们都成了冠军。</p>
+  </div></div><div class="rk"><div class="no nox">10</div>
+  <div class="body">
+    <h3><span class="wtype">狂徒</span>狂徒 · 紫阙金琅</h3>
+    <div class="who">使用者：<b>Smoggy</b></div>
+    <p>Smoggy 的主战步枪，紫金配色低调又贵气，正合他「沉默的基石」人设。被首杀后瞬间三杀回敬的那把枪。</p>
+  </div></div>
+  <p class="muted" style="margin-top:18px">副武器荣誉提名：</p>
+  <div>
+    <span class="mention"><b>獠犬 · 781-A协议</b>（nobody / S1Mon 共用）</span>
+    <span class="mention"><b>鬼魅</b>（Smoggy 日落之城残局 1v2 两连爆头、nobody 幽邃地窟鬼魅三杀）</span>
+  </div>
+</section>
+<div class="fanline"><svg width="150" height="46" viewBox="0 0 150 46"><g stroke-linecap="round"><path d="M75 44 L59 5" stroke="#E3C06A" stroke-width="2" opacity="0.9"/><path d="M75 44 L45 9" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L32 15" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L23 23" stroke="#8B5CF6" stroke-width="2" opacity="0.9"/><path d="M75 44 L17 33" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L15 44" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L17 54" stroke="#E3C06A" stroke-width="2" opacity="0.9"/><path d="M75 44 L23 63" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L32 72" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L45 78" stroke="#8B5CF6" stroke-width="2" opacity="0.9"/><path d="M75 44 L59 82" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><circle cx="75" cy="44" r="5" fill="#E3C06A"/><circle cx="75" cy="44" r="10" fill="none" stroke="#8B5CF6" stroke-width="1.2" opacity=".7"/></g></svg></div>
+<section>
+  <h2 class="serif">刀皮排行榜<small>MELEE SKINS</small></h2>
+  <div class="rule"></div>
+  <div class="rk"><div class="no no1">1</div>
+  <div class="body">
+    <h3><span class="wtype">近战</span>金箍棒「定海神针」</h3>
+    <div class="who">使用者：<b>康康</b></div>
+    <p>康康在决赛中使用时间最长的近战。名场面「直面天命」、与《黑神话：悟空》天命人的联动、对中国文化的宣传——三重意义让康康赛后特别申请，把这把刀加入 EDG 甄选「英雄之选」套装作为 MVP 道具。一杆定海神针，定的是 CN FPS 的海。</p>
+  </div></div><div class="rk"><div class="no no2">2</div>
+  <div class="body">
+    <h3><span class="wtype">近战</span>电工钳</h3>
+    <div class="who">使用者：<b>nobody</b></div>
+    <p>指挥 nobody 的近战选择，被粉丝玩出无数梗——「电工钳的特殊意义」与「转刀被偷」都成了名场面之外的余兴节目。谁说指挥不能整活？</p>
+  </div></div><div class="rk"><div class="no no3">3</div>
+  <div class="body">
+    <h3><span class="wtype">近战</span>2024全球冠军赛 · 冠军战刀</h3>
+    <div class="who">使用者：<b>荣誉席位</b></div>
+    <p>本届赛事的冠军之刃：紫色星云刀身、24 杀金裂纹、可与冠军幻影挂饰联动。注：EDG 队员决赛的刀皮仅康康与 nobody 有公开统计，此席为赛事纪念位，致敬每一个午夜加练的握刀人。</p>
+  </div></div>
+</section>
+<div class="note">※ 榜单依据玩家对 2024 全球冠军赛总决赛的逐局皮肤统计与 EDG 甄选「英雄之选」套装相关报道整理，
+属粉丝自制内容、非官方数据；如与官方信息有出入，以官方为准。</div>
+<div class="fanline"><svg width="150" height="46" viewBox="0 0 150 46"><g stroke-linecap="round"><path d="M75 44 L59 5" stroke="#E3C06A" stroke-width="2" opacity="0.9"/><path d="M75 44 L45 9" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L32 15" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L23 23" stroke="#8B5CF6" stroke-width="2" opacity="0.9"/><path d="M75 44 L17 33" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L15 44" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L17 54" stroke="#E3C06A" stroke-width="2" opacity="0.9"/><path d="M75 44 L23 63" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L32 72" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L45 78" stroke="#8B5CF6" stroke-width="2" opacity="0.9"/><path d="M75 44 L59 82" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><circle cx="75" cy="44" r="5" fill="#E3C06A"/><circle cx="75" cy="44" r="10" fill="none" stroke="#8B5CF6" stroke-width="1.2" opacity=".7"/></g></svg></div>
+</div>
+<footer class="site">
+  <b>超星闪耀 SUPERNOVA</b> · 2024 首尔全球冠军赛视觉致敬 · 粉丝自制非官方页面<br>
+  数据与名场面整理自 2024 全球冠军赛公开报道 · 照片源自公开报道与官方素材，版权归原作者及 EDG 电子竞技俱乐部所有，仅作课程作业展示
+</footer>
+</body></html>

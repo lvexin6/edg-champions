@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EDG.CHICHOO · 球球 | 2024世界冠军</title>
+<style>
+:root{--bg:#08080F;--panel:#13121F;--panel2:#1A1929;--gold:#E3C06A;--gold2:#F5DE9A;
+--pu:#8B5CF6;--pu2:#BCA5FF;--red:#D22B2B;--text:#E8E6F0;--muted:#9C97B3;--line:#2E2B45}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:var(--bg);color:var(--text);
+font-family:"Noto Sans SC","Microsoft YaHei",sans-serif;line-height:1.75;font-size:16px}
+.serif{font-family:"Noto Serif SC","Source Han Serif SC","STZhongsong","SimSun",serif}
+a{color:var(--gold);text-decoration:none}
+a:hover{color:var(--gold2)}
+nav{position:sticky;top:0;z-index:10;background:rgba(8,8,15,.94);backdrop-filter:blur(6px);
+border-bottom:1px solid var(--line)}
+nav .inner{max-width:960px;margin:0 auto;display:flex;align-items:center;gap:2px;padding:0 16px;height:58px}
+.logo{display:flex;align-items:center;gap:10px;margin-right:auto}
+.logo .mark{background:var(--red);color:#fff;font-weight:900;font-size:18px;
+padding:4px 10px;letter-spacing:2px;font-family:Arial,Helvetica,sans-serif}
+.logo .cn{color:var(--gold);font-size:13px;letter-spacing:4px}
+nav a.pl{color:var(--text);padding:6px 10px;border-radius:4px;font-size:15px}
+nav a.pl:hover{color:var(--gold2);background:rgba(139,92,246,.12)}
+nav a.pl.on{color:var(--gold2);border-bottom:2px solid var(--gold)}
+.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line);
+background:radial-gradient(ellipse at 70% 20%,#241A42 0%,#08080F 65%)}
+.hero .wrap{padding:64px 20px 56px;position:relative}
+.hero svg.deco{position:absolute;right:-60px;top:-30px;opacity:.6;pointer-events:none}
+.vside{position:absolute;right:6px;top:120px;writing-mode:vertical-rl;letter-spacing:14px;
+color:var(--gold);font-size:20px;opacity:.85;font-weight:700}
+.kicker{color:var(--pu2);letter-spacing:6px;font-size:14px;font-weight:700;margin-bottom:20px;
+line-height:1.9}
+h1.big{font-size:clamp(44px,8vw,84px);line-height:1.08;font-weight:900;color:#fff;
+text-shadow:0 4px 34px rgba(139,92,246,.5)}
+h1.big .g{color:var(--gold)}
+.sub{margin-top:14px;color:var(--muted);font-size:17px}
+.statrow{display:flex;gap:14px;flex-wrap:wrap;margin-top:30px}
+.stat{background:rgba(19,18,31,.85);border:1px solid var(--line);border-radius:6px;
+padding:12px 20px;min-width:130px}
+.stat b{display:block;color:var(--gold2);font-size:26px;font-family:Arial,sans-serif}
+.stat span{color:var(--muted);font-size:13px}
+section{padding:52px 0}
+section h2{font-size:26px;color:var(--gold);letter-spacing:3px;margin-bottom:8px}
+section h2 small{color:var(--muted);font-size:13px;letter-spacing:2px;margin-left:12px}
+.rule{height:2px;background:linear-gradient(90deg,var(--pu),var(--gold),transparent);
+margin-bottom:26px;width:220px}
+p.lead{color:var(--text);font-size:16.5px}
+.muted{color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:16px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:8px;padding:20px 22px;
+transition:transform .15s,border-color .15s}
+.card:hover{transform:translateY(-3px);border-color:var(--gold)}
+.card h3{color:#fff;font-size:19px;margin-bottom:4px}
+.card .role{color:var(--pu2);font-size:13px;letter-spacing:2px;margin-bottom:10px;font-weight:700}
+.card ul{list-style:none}
+.card li{color:var(--muted);font-size:14px;padding-left:16px;position:relative}
+.card li::before{content:"";position:absolute;left:2px;top:11px;width:5px;height:5px;
+background:var(--gold);transform:rotate(45deg)}
+a.cardlink{display:block}
+a.cardlink:hover{color:inherit}
+.tl{border-left:2px solid var(--line);margin-left:10px;padding-left:26px}
+.tl .ev{position:relative;padding-bottom:26px}
+.tl .ev::before{content:"";position:absolute;left:-33px;top:7px;width:10px;height:10px;
+border-radius:50%;background:var(--bg);border:2px solid var(--gold)}
+.tl .ev .tag{color:var(--pu2);font-size:13px;font-weight:700;letter-spacing:1px}
+.tl .ev b{color:#fff;font-size:17px;display:block;margin:2px 0}
+.tl .ev p{color:var(--muted);font-size:14.5px}
+.fanline{text-align:center;padding:34px 0 6px;opacity:.9}
+.phero{display:flex;gap:34px;align-items:center;flex-wrap:wrap;padding:60px 0 40px}
+.shield{flex:0 0 auto}
+.ptag{display:inline-block;margin:3px 6px 3px 0;padding:4px 12px;border:1px solid var(--pu);
+color:var(--pu2);border-radius:999px;font-size:13px;letter-spacing:1px}
+.agents .ag{display:inline-block;margin:4px 8px 4px 0;padding:6px 14px;border-radius:4px;
+background:var(--panel2);border:1px solid var(--line);color:var(--gold2);font-size:14.5px}
+.agents .ag small{color:var(--muted);margin-left:6px}
+blockquote{border-left:3px solid var(--gold);background:var(--panel);
+padding:18px 24px;margin:24px 0;color:var(--gold2);font-size:18px;border-radius:0 8px 8px 0}
+blockquote footer{color:var(--muted);font-size:13px;margin-top:6px}
+/* ---------- 排行榜 ---------- */
+.rk{display:flex;gap:16px;align-items:flex-start;background:var(--panel);
+border:1px solid var(--line);border-radius:8px;padding:16px 20px;margin-bottom:12px;
+transition:border-color .15s}
+.rk:hover{border-color:var(--gold)}
+.rk .no{flex:0 0 46px;height:46px;border-radius:8px;display:flex;align-items:center;
+justify-content:center;font-weight:900;font-size:22px;font-family:Arial}
+.no1{background:linear-gradient(135deg,#F5DE9A,#B58B2E);color:#141007}
+.no2{background:linear-gradient(135deg,#D9DCE8,#8F93A6);color:#111318}
+.no3{background:linear-gradient(135deg,#D9A06A,#8F5B2E);color:#140B05}
+.nox{background:var(--panel2);color:var(--muted);border:1px solid var(--line)}
+.rk .body{flex:1;min-width:0}
+.rk h3{color:#fff;font-size:18px;display:flex;flex-wrap:wrap;gap:8px;align-items:baseline}
+.rk h3 .wtype{display:inline-block;padding:2px 10px;border-radius:4px;background:rgba(139,92,246,.15);
+border:1px solid var(--line);color:var(--pu2);font-size:12.5px;letter-spacing:1px;vertical-align:2px}
+.rk .who{color:var(--gold2);font-size:14px;margin-top:2px}
+.rk .who b{color:var(--gold)}
+.rk p{color:var(--muted);font-size:14.5px;margin-top:4px}
+.mention{display:inline-block;margin:6px 10px 6px 0;padding:6px 14px;border-radius:999px;
+background:var(--panel2);border:1px dashed var(--line);color:var(--muted);font-size:14px}
+.mention b{color:var(--pu2)}
+.note{background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--pu);
+padding:16px 20px;border-radius:0 8px 8px 0;color:var(--muted);font-size:14px;margin-top:28px}
+footer.site{border-top:1px solid var(--line);margin-top:60px;padding:28px 0 44px;
+color:var(--muted);font-size:13px;text-align:center;letter-spacing:1px}
+footer.site b{color:var(--gold)}
+@media(max-width:640px){.vside{display:none}.phero{gap:20px}.rk{padding:12px 14px}}
+/* ---- 图片相关 ---- */
+.heroimg{display:block;width:100%;height:auto;border-top:1px solid var(--line)}
+.phero>div:last-child{flex:1 1 380px;min-width:0}
+.pcard{display:block;width:300px;max-width:100%;aspect-ratio:4/5;object-fit:cover;object-position:50% 22%;
+border-radius:10px;border:1px solid var(--line);box-shadow:0 18px 46px rgba(0,0,0,.55)}
+.gal{display:grid;grid-template-columns:1fr;gap:22px}
+.gal figure{margin:0;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+.gal img{display:block;width:100%;height:auto}
+.gal2 img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 25%}
+.gal figcaption{padding:12px 18px;color:var(--muted);font-size:14px;
+border-top:1px solid var(--line);background:var(--panel2)}
+.gal2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media(max-width:720px){.gal2{grid-template-columns:1fr}.pcard{width:100%}}
+</style></head>
+<body>
+<nav><div class="inner">
+  <a class="logo" href="../index.html">
+    <span class="mark">EDG</span><span class="cn serif">骑士加冕</span>
+  </a><a class="pl" href="kk.html">康康</a><a class="pl" href="chichoo.html">球球</a><a class="pl" href="nobody.html">nobody</a><a class="pl" href="smoggy.html">Smoggy</a><a class="pl" href="simon.html">S1Mon</a><a class="pl" href="arsenal.html">武库</a><a class="pl" href="gallery.html">图集</a>
+</div></nav>
+<div class="wrap">
+
+<div class="phero">
+  <div class="shield"><img class="pcard" src="../images/chichoo.jpg" alt="CHICHOO 选手卡"></div>
+  <div>
+    <div class="kicker">EDG · 2024 GLOBAL CHAMPIONS · SEOUL · SUPERNOVA</div>
+    <h1 class="big" style="font-size:clamp(36px,6vw,60px)">球球
+      <span class="g serif" style="font-size:.55em">CHICHOO</span></h1>
+    <p class="sub">本名 万顺治 · EDG 无畏契约分部 · 2024 全球冠军赛冠军成员</p>
+    <div style="margin-top:14px"><span class="ptag">控场 / 哨位 Flex</span><span class="ptag">残局大师</span></div>
+  </div>
+</div>
+<div class="fanline"><svg width="150" height="46" viewBox="0 0 150 46"><g stroke-linecap="round"><path d="M75 44 L59 5" stroke="#E3C06A" stroke-width="2" opacity="0.9"/><path d="M75 44 L45 9" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L32 15" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L23 23" stroke="#8B5CF6" stroke-width="2" opacity="0.9"/><path d="M75 44 L17 33" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L15 44" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L17 54" stroke="#E3C06A" stroke-width="2" opacity="0.9"/><path d="M75 44 L23 63" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L32 72" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L45 78" stroke="#8B5CF6" stroke-width="2" opacity="0.9"/><path d="M75 44 L59 82" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><circle cx="75" cy="44" r="5" fill="#E3C06A"/><circle cx="75" cy="44" r="10" fill="none" stroke="#8B5CF6" stroke-width="1.2" opacity=".7"/></g></svg></div>
+<section>
+  <h2 class="serif">主玩角色与位置<small>AGENTS &amp; ROLE</small></h2>
+  <div class="rule"></div>
+  <div class="agents"><span class="ag">蝰蛇 Viper<small>图四展开蝰腹大招</small></span><span class="ag">幽影 Omen<small>决胜图控场单摸</small></span></div>
+</section>
+<section>
+  <h2 class="serif">决赛武器库<small>LOADOUT</small></h2>
+  <div class="rule"></div>
+  <div class="agents"><span class="ag">戍卫 · 天界神兵<small>决赛主武器</small></span><span class="ag">狂徒 · 2021全球冠军赛<small>步枪</small></span></div>
+  <p class="muted" style="font-size:13px;margin-top:10px">※ 依据玩家对总决赛的逐局统计整理，另有
+  <a href="arsenal.html">全队武器皮肤排行榜</a>。</p>
+</section>
+<section>
+  <h2 class="serif">高光战绩<small>HIGHLIGHTS</small></h2>
+  <div class="rule"></div>
+  <div class="card" style="max-width:640px"><ul><li>胜者组决赛「幽邃地窟」单局 <b>MVP</b></li><li>总决赛图三关键回合单人三杀稳住战线</li><li>胜者组决赛第20回合 <b>绝境残局四杀</b></li><li>多场国际大赛残局以一敌多</li></ul></div>
+</section>
+<section>
+  <h2 class="serif">个性介绍<small>WHO IS HE</small></h2>
+  <div class="rule"></div>
+  <p class="lead" style="max-width:680px">逆风局里的「责任神」。EDG打得越艰难，球球越像提前收到了剧本：导播甚至形成路径依赖——残局一到就把镜头切到他身上，因为他总能创造以一敌多的奇迹。稳、冷、准，他是EDG冠军之路上最让人放心的那个人，也是「求人不如球神」这句话的全部出处。</p>
+</section>
+<section>
+  <h2 class="serif">广为人知的名场面<small>ICONIC MOMENTS</small></h2>
+  <div class="rule"></div>
+  <div class="grid"><div class="card"><h3>树屋1v4名场面</h3><p style="color:var(--muted);font-size:14.5px">图三「莲花古城」：球球在树屋以极快的定位全程无伤连续接下四名敌人外加一台机器车，拿下全场第二个五杀。</p></div><div class="card"><h3>残局双杀封神</h3><p style="color:var(--muted);font-size:14.5px">胜者组决赛第23回合来到赛点局：ZmjjKK冥驹双杀打开局面后，球球残局双杀即刻封神，拿下赛点。</p></div><div class="card"><h3>求人不如球神</h3><p style="color:var(--muted);font-size:14.5px">每当EDG陷入1vN残局，弹幕齐刷这句——球神从不缺席。</p></div></div>
+  <blockquote class="serif">「求人不如球神。」<footer>—— CN瓦观众语录</footer></blockquote>
+</section>
+<div class="fanline"><svg width="150" height="46" viewBox="0 0 150 46"><g stroke-linecap="round"><path d="M75 44 L59 5" stroke="#E3C06A" stroke-width="2" opacity="0.9"/><path d="M75 44 L45 9" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L32 15" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L23 23" stroke="#8B5CF6" stroke-width="2" opacity="0.9"/><path d="M75 44 L17 33" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L15 44" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L17 54" stroke="#E3C06A" stroke-width="2" opacity="0.9"/><path d="M75 44 L23 63" stroke="#8B5CF6" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L32 72" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><path d="M75 44 L45 78" stroke="#8B5CF6" stroke-width="2" opacity="0.9"/><path d="M75 44 L59 82" stroke="#E3C06A" stroke-width="1.2" opacity="0.55"/><circle cx="75" cy="44" r="5" fill="#E3C06A"/><circle cx="75" cy="44" r="10" fill="none" stroke="#8B5CF6" stroke-width="1.2" opacity=".7"/></g></svg></div>
+</div>
+<footer class="site">
+  <b>超星闪耀 SUPERNOVA</b> · 2024 首尔全球冠军赛视觉致敬 · 粉丝自制非官方页面<br>
+  数据与名场面整理自 2024 全球冠军赛公开报道 · 照片源自公开报道与官方素材，版权归原作者及 EDG 电子竞技俱乐部所有，仅作课程作业展示
+</footer>
+</body></html>
